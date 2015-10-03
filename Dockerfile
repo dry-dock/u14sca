@@ -1,4 +1,4 @@
-FROM gcr.io/dry-dock/u14jav:prod
+FROM drydock/u14jav:prod
 
 ADD . /tmp
 
