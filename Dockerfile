@@ -1,5 +1,5 @@
 FROM drydock/u14jav:prod
 
-ADD . /tmp
+ADD . /u14sca
 
-RUN /tmp/install.sh && rm -rf /tmp
+RUN /u14sca/install.sh
