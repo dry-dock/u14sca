@@ -1,5 +1,10 @@
 #!/bin/bash
 
+sudo apt-get clean
+sudo rm -rf /var/lib/apt/lists
+sudo apt-get clean
+sudo apt-get update
+
 # Install sbt
 echo "================= Install sbt ==================="
 sudo wget https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.8/sbt-launch.jar
@@ -9,7 +14,7 @@ sudo echo 'java $SBT_OPTS -jar `dirname $0`/sbt-launch.jar "$@"' >> /usr/local/b
 sudo chmod +x /usr/local/bin/sbt
 printf 'exit\n' | sbt
 
-for file in /tmp/version/*;
+for file in /u14sca/version/*;
 do
   $file
 done
